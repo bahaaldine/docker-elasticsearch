@@ -37,3 +37,16 @@ The volumes section lets you map host directory to container directories, here,
 	- the logs: follow ES log activity without having to connect to the container
 	- configurations: externalizing configuration lets you shape your node depending on your needs
 	- node data: when shutting your container, node data are not lost !
+
+## Building the Docker image
+
+You can use the shipped `Makefile` to build the image,
+exemple:
+
+```bash
+make all
+````
+Available arguments:
+- build: build the docker image
+- tag_latest: tag version to latest version
+- all: apply build and tag_latest
