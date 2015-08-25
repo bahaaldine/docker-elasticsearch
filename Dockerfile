@@ -24,9 +24,15 @@ RUN \
 
 ADD etc/supervisor/conf.d/elasticsearch.conf /etc/supervisor/conf.d/elasticsearch.conf
 
+# Marvel
 RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest
+# Shield 
+RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/license/latest
+# Watcher
+RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/watcher/latest -Des.path.conf=/etc/elasticsearch
 
 EXPOSE 9200
+EXPOSE 9300
 
 CMD [ "/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf" ]
 
