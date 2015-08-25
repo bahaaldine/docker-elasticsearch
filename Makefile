@@ -1,5 +1,5 @@
 NAME = bahaaldine/docker-elasticsearch
-VERSION = 0.0.1
+VERSION = 1.6.0
 
 .PHONY: all build test tag_latest release ssh
 
