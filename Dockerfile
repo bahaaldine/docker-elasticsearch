@@ -28,6 +28,7 @@ ADD etc/supervisor/conf.d/elasticsearch.conf /etc/supervisor/conf.d/elasticsearc
 RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest
 # Shield 
 RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/license/latest
+RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/shield/latest
 # Watcher
 RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/watcher/latest -Des.path.conf=/etc/elasticsearch
 
